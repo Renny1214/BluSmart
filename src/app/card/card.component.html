@@ -1,0 +1,21 @@
+<div [ngClass]="[cardData.header, 'card', cardData.header + '-card']">
+ <div class="card-header__box">
+  <div class="card-header" [ngClass]="cardData.header + '-header'">
+    {{ cardData.header }}
+</div>
+ </div>
+  <div class="card-body">
+    <div class="card-title" [ngClass]="cardData.header + '-title'">
+      {{ cardData.title }}
+    </div>
+  </div>
+  <div class="card-buttons">
+    <button
+      *ngFor="let button of cardData.buttons"
+      class="btn"
+      [ngClass]="cardData.header + '-button'"
+    >
+      + {{ button }}
+    </button>
+  </div>
+</div>

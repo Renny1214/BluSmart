@@ -1,0 +1,27 @@
+[
+  {
+    "header": "onboard",
+    "title": "Onboard New Product",
+    "buttons": ["Onboard Single Porduct"]
+  },
+  {
+    "header": "onboard",
+    "title": "Onboard Brand or Category",
+    "buttons": ["Onboard new Brand", "Onboard new Category"]
+  },
+  {
+    "header": "purchase",
+    "title": "Record Product Handover",
+    "buttons": ["Handover to Workshop", "Handover to technician"]
+  },
+  {
+    "header": "handover",
+    "title": "Product Handover",
+    "buttons": ["Handover to Workshop", "Handover to technician"]
+  },
+  {
+    "header": "takeover",
+    "title": "Product Takeover",
+    "buttons": ["Takeover fromm workshop", "Takeover from technician"]
+  }
+]

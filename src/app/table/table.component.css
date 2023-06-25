@@ -1,0 +1,92 @@
+.table-container {
+  width: 100%;
+  overflow: auto;
+}
+
+.table {
+  margin: 5vh;
+  width: -webkit-fill-available;
+}
+
+th {
+  position: relative; /* Add position relative */
+  background-color: rgb(242, 250, 255);
+}
+
+th::before {
+  content: "";
+  position: absolute;
+  top: 2vh;
+  right: 0;
+  width: 1px; /* Adjust the width of the line */
+  height: 50%; /* Adjust the height of the line */
+  background-color: #ddd; /* Adjust the color of the line */
+}
+
+th:last-child::before {
+  display: none; /* Remove line from the last header */
+}
+td{
+  background-color: white;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  height: 6vh;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+a {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.mat-paginator {
+  margin-top: 20px;
+}
+
+.status-circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.status-pending {
+  background-color: rgb(219, 162, 39);
+}
+.text-pending {
+  color: rgb(219, 162, 39);
+}
+.status-approved {
+  background-color: green;
+}
+.text-approved {
+  color: green;
+}
+.status-rejected {
+  background-color: red;
+}
+.text-rejected {
+  color: red;
+}
+
+.status-text {
+  vertical-align: middle;
+  padding-left: 1vh;
+}
+
+.mat-mdc-paginator {
+  background-color: rgb(247 247 251);
+}

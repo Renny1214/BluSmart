@@ -1,0 +1,49 @@
+<div *ngIf="tableData" class="table-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Data and time of request</th>
+        <th>Activity Type</th>
+        <th>Remarks of admin</th>
+        <th>Request Status</th>
+        <th>Requested By</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let item of tableData.slice(
+            (currentPage - 1) * pageSize,
+            currentPage * pageSize
+          )
+        "
+      >
+        <td>{{ getFormattedDate(item.dateAndTime) }}</td>
+        <td>{{ item.activityType }}</td>
+        <td>{{ item.remarkAsAdmin }}</td>
+        <td>
+          <span
+            class="status-circle"
+            [ngClass]="getRequestStatusClass(item.requestStatus)"
+          ></span>
+          <span
+            class="status-text"
+            [ngClass]="getRequestStatusTextClass(item.requestStatus)"
+            >{{ item.requestStatus }}</span
+          >
+        </td>
+        <td>{{ item.requestedBy }}</td>
+        <td><a href="#" style="text-decoration: underline;">View Details</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <mat-paginator
+  [pageSizeOptions]="pageSizeOptions"
+  [pageSize]="pageSize"
+  [length]="tableData?.length"
+  (page)="onPageChange($event)"
+></mat-paginator>
+
+</div>
+
