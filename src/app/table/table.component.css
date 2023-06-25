@@ -9,7 +9,7 @@
 }
 
 th {
-  position: relative; /* Add position relative */
+  position: relative;
   background-color: rgb(242, 250, 255);
 }
 
@@ -18,13 +18,13 @@ th::before {
   position: absolute;
   top: 2vh;
   right: 0;
-  width: 1px; /* Adjust the width of the line */
-  height: 50%; /* Adjust the height of the line */
-  background-color: #ddd; /* Adjust the color of the line */
+  width: 1px;
+  height: 50%;
+  background-color: #ddd;
 }
 
 th:last-child::before {
-  display: none; /* Remove line from the last header */
+  display: none;
 }
 td{
   background-color: white;

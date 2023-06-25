@@ -1,6 +1,4 @@
 .card {
-  min-width: 16vw;
-  max-width: 16vw;
   min-height: 40vh;
   max-height: fit-content;
   background-color: white;
@@ -157,7 +155,7 @@
 }
 
 .card-title {
-  font-size: 30px;
+  font-size: 22px;
   line-height: 4vh;
   font-weight: 500;
   width: 25vh;
